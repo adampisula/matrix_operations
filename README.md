@@ -1,4 +1,5 @@
-#Aby skompilować program należy najpierw wykonać:
+#Kompilacja i otwarcie programu
+Aby skompilować program należy najpierw wykonać:
 ```
 g++ multiply.cpp -o multiply
 ```
