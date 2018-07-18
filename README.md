@@ -1,17 +1,15 @@
-#Kompilacja i otwarcie programu
-Aby skompilować program należy najpierw wykonać:
+# Operations on matrices
+
+To run programs type respectively
 ```
-g++ multiply.cpp -o multiply
+g++ multiply.cpp -o multiply && ./multiply
 ```
-lub
+or
 ```
-g++ add.cpp -o add
+g++ add.cpp -o add && ./add
 ```
-lub
+or
 ```
-g++ subtract.cpp -o subtract 
+g++ subtract.cpp -o subtract && ./subtract
 ```
-następnie otworzyć go wykonując
-```
-./nazwa_programu
-```
+(Note that the left hand side of the command is compilation of the source code.)

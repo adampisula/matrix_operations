@@ -9,17 +9,17 @@ int main(void)
     int m2x = 0;
     int m2y = 0;
 
-    //TWORZENIE PIERWSZEJ MACIERZY
-    cout << "Podaj szerokosc macierzy: ";
+    //CREATING FIRST MATRIX
+    cout << "Type in matrix' width: ";
     cin >> m1x;
-    cout << "Podaj wysokosc macierzy: ";
+    cout << "Type in matrix' height: ";
     cin >> m1y;
 
-    //TWORZENIE DRUGIEJ MACIERZY
-    //MACIERZE MUSZA MIEC TEN SAM ROZMIAR
-    /*cout << "Podaj szerokosc drugiej macierzy: ";
+    //CREATING SECOND MATRIX
+    //MATRICES MUST HAVE EQUAL DIMENSIONS
+    /*cout << "Type in second matrix' width: ";
     cin >> m2x;
-    cout << "Podaj wysokosc drugiej macierzy: ";
+    cout << "Type in second matrix' height: ";
     cin >> m2y;*/
 
     m2x = m1x;
@@ -27,58 +27,58 @@ int main(void)
 
     cout << endl;
 
-    //MACIERZ PIERWSZA
+    //FIRST MATRIX
     int m1[m1x][m1y];
 
-    //MACIERZ DRUGA
+    //SECOND MATRIX
     int m2[m2x][m2y];
 
-    //UZUPELNIANIE PIERWSZEJ MACIERZY
-    cout << "Macierz pierwsza:" << endl;
+    //FILLING IN FIRST MATRIX
+    cout << "First matrix:" << endl;
 
     for(int i = 1; i <= m1y; i++)
     {
-        cout << "\t" << "Wiersz " << i << ": " << endl;
+        cout << "\t" << "Row " << i << ": " << endl;
 
         for(int j = 1; j <= m1x; j++)
         {
             cout << "\t\t";
-            cout << "Komorka(" << j << "," << i << ") = ";
+            cout << "Cell(" << j << "," << i << ") = ";
             cin >> m1[j - 1][i - 1];
         }
 
         cout << endl;
     }
 
-    //UZUPELNIANIE DRUGIEJ MACIERZY
-    cout << "Macierz druga:" << endl;
+    //FILLING IN SECOND MATRIX
+    cout << "Second matrix:" << endl;
 
     for(int i = 1; i <= m2y; i++)
     {
-        cout << "\t" << "Wiersz " << i << ": " << endl;
+        cout << "\t" << "Row " << i << ": " << endl;
 
         for(int j = 1; j <= m2x; j++)
         {
             cout << "\t\t";
-            cout << "Komorka(" << j << "," << i << ") = ";
+            cout << "Cell(" << j << "," << i << ") = ";
             cin >> m2[j - 1][i - 1];
         }
 
         cout << endl;
     }
 
-    //WYPISYWANIE MACIERZY
+    //PRINTING MATRICES OUT
     int choice = 0;
 
-    cout << endl << "Wypisac macierze? [1/0]: ";
+    cout << endl << "Print matrices out? [1/0]: ";
     cin >> choice;
 
     cout << endl;
 
     if(choice != 0)
     {
-        //WYPISYWANIE PIERWSZEJ MACIERZY
-        cout << "Macierz pierwsza:" << endl;
+        //PRINTING FIRST MATRIX OUT
+        cout << "First matrix:" << endl;
 
         for(int i = 0; i < m1y; i++)
         {
@@ -107,8 +107,8 @@ int main(void)
         
         cout << endl;
 
-        //WYPISYWANIE DRUGIEJ MACIERZY
-        cout << "Macierz druga:" << endl;
+        //PRINTING SECOND MATRIX OUT
+        cout << "Second matrix:" << endl;
 
         for(int i = 0; i < m2y; i++)
         {
@@ -136,44 +136,44 @@ int main(void)
         }
     }
 
-    //WYNIK
-    int wynik[m1x][m1y];
+    //RESULT
+    int result[m1x][m1y];
 
     cout << endl;
-    cout << "Obliczanie... ";
+    cout << "Calculating... ";
 
     for(int i = 0; i < m1y; i++)
     {        
         for(int j = 0; j < m1x; j++)
         {
-            wynik[j][i] = m1[j][i] + m2[j][i];
+            result[j][i] = m1[j][i] + m2[j][i];
         }
     }
 
-    cout << "Ukonczono" << endl;
+    cout << "Finished." << endl;
     cout << endl;
-    cout << "Wynik:" << endl;
+    cout << "Result:" << endl;
 
     for(int i = 0; i < m1y; i++)
     {
         for(int j = 0; j < m1x; j++)
         {       
-            if(wynik[j][i] < 10)
+            if(result[j][i] < 10)
             {
                 cout << "   ";
             }
             
-            else if(wynik[j][i] < 100)
+            else if(result[j][i] < 100)
             {
                 cout << "  ";
             }
             
-            else if(wynik[j][i] < 1000)
+            else if(result[j][i] < 1000)
             {
                 cout << " ";
             }
             
-            cout << wynik[j][i] << " ";
+            cout << result[j][i] << " ";
         }
 
         cout << endl;
